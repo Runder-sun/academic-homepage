@@ -82,6 +82,7 @@
     const style = getComputedStyle(document.documentElement);
     colors = {
       accent: style.getPropertyValue('--accent').trim() || '#514b45',
+      detail: style.getPropertyValue('--detail').trim() || style.getPropertyValue('--accent').trim() || '#514b45',
       paper: style.getPropertyValue('--paper').trim() || '#f5f1e9',
       ink: style.getPropertyValue('--ink').trim() || '#302e2b',
       line: style.getPropertyValue('--line').trim() || '#d7cfc2'
@@ -135,14 +136,14 @@
       context.globalAlpha = 1;
     }
 
-    function dot(point, radius, fill, outline = false) {
+    function dot(point, radius, fill, outline = false, stroke = colors.accent) {
       const [x, y] = project(point);
       context.beginPath();
       context.arc(x, y, radius, 0, Math.PI * 2);
       context.fillStyle = fill;
       context.fill();
       if (outline) {
-        context.strokeStyle = colors.accent;
+        context.strokeStyle = stroke;
         context.lineWidth = 1.2;
         context.stroke();
       }
@@ -162,9 +163,9 @@
     line([[-1.59, .58, -.85], [-1.59, 1.02, -.85], [-1.59, 1.02, .08], [-1.59, .58, .08]], colors.ink, .19, .8, true);
 
     context.setLineDash([3, 5]);
-    line(route.map(([x, z]) => [x, .015, z]), colors.accent, .63, 1.3);
+    line(route.map(([x, z]) => [x, .015, z]), colors.detail, .9, 1.3);
     context.setLineDash([]);
-    route.forEach(([x, z], index) => dot([x, .015, z], index === 0 || index === route.length - 1 ? 3 : 1.8, colors.paper, true));
+    route.forEach(([x, z], index) => dot([x, .015, z], index === 0 || index === route.length - 1 ? 3 : 1.8, colors.paper, true, colors.detail));
 
     // Sort the cuboid faces in camera space so the furniture stays solid while orbiting.
     const faces = [];

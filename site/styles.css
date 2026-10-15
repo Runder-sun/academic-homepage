@@ -4,11 +4,19 @@
   --muted: #6b625b;
   --accent: #514b45;
   --accent-light: #e6e0d6;
+  --detail: var(--accent);
+  --detail-light: var(--accent-light);
+  --detail-line: var(--line);
   --line: #d7cfc2;
   --surface: #ede7dc;
   --shadow: #e8e0d4;
   --serif: 'Iowan Old Style', Baskerville, Georgia, 'Songti SC', 'Noto Serif CJK SC', serif;
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+:root[data-theme="paper"] {
+  --detail: #94713c;
+  --detail-light: #efe7d8;
+  --detail-line: #cab894;
 }
 :root[data-theme="copper"] {
   --accent: #975b36;
@@ -43,7 +51,7 @@ h1, h2, h3, p, figure { margin: 0; }
 .wordmark-detail { color: var(--accent); font-family: var(--sans); font-size: 10px; letter-spacing: .16em; }
 nav { display: flex; gap: 38px; align-items: center; }
 nav a { position: relative; font-size: 13px; color: var(--muted); padding: 14px 0; transition: color .2s; }
-nav a::after { position: absolute; content: ''; width: 100%; height: 1px; background: var(--accent); bottom: 7px; left: 0; opacity: 0; }
+nav a::after { position: absolute; content: ''; width: 100%; height: 1px; background: var(--detail); bottom: 7px; left: 0; opacity: 0; }
 nav a.active, nav a:hover { color: var(--accent); }
 nav a.active::after { opacity: 1; }
 .language-toggle { border: 1px solid var(--line); background: transparent; border-radius: 0; padding: 5px 11px; font-size: 12px; letter-spacing: .08em; }
@@ -54,7 +62,7 @@ nav a.active::after { opacity: 1; }
 .hero { padding-top: 58px; padding-bottom: 44px; display: grid; grid-template-columns: 1.3fr .9fr; gap: 72px; align-items: center; }
 .eyebrow { font-size: 10px; letter-spacing: .16em; font-weight: 500; color: var(--muted); }
 .hero .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: .12em; color: var(--accent); }
-.profile-mark { width: 8px; height: 8px; background: var(--accent); flex-shrink: 0; }
+.profile-mark { width: 8px; height: 8px; background: var(--detail); flex-shrink: 0; }
 h1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 22px; font-family: var(--serif); font-size: clamp(66px, 6.5vw, 88px); line-height: 1.13; font-weight: 400; letter-spacing: -3px; margin-top: 19px; }
 .chinese-name { font-size: 31px; letter-spacing: .08em; font-weight: 400; color: var(--accent); }
 .affiliation { margin-top: 15px; font-size: 14px; color: var(--muted); letter-spacing: .03em; }
@@ -101,7 +109,7 @@ h1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 22px; font-fami
 .image-caption { padding: 11px 0 0; display: flex; justify-content: space-between; align-items: center; font-size: 10px; letter-spacing: .04em; color: var(--muted); }
 .paper-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; color: var(--muted); font-size: 11px; letter-spacing: .02em; margin-bottom: 12px; }
 .paper-badge { color: var(--ink); font-size: 12px; letter-spacing: .02em; }
-.paper-badge strong { margin-left: 9px; padding: 2px 7px; border: 1px solid var(--line); color: var(--accent); background: var(--accent-light); font-size: 11px; font-weight: 600; }
+.paper-badge strong { margin-left: 9px; padding: 2px 7px; border: 1px solid var(--detail-line); color: var(--accent); background: var(--detail-light); font-size: 11px; font-weight: 600; }
 .paper h3 { font-family: var(--serif); font-size: 25px; line-height: 1.35; font-weight: 400; letter-spacing: -.2px; }
 .paper h3 a:hover { color: var(--accent); }
 .authors { color: var(--muted); font-size: 13px; line-height: 1.8; margin-top: 11px; }
