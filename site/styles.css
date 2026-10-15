@@ -66,12 +66,12 @@ h1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 20px; font-fami
 .section-heading h2 { font-family: var(--serif); font-size: 34px; font-weight: 400; line-height: 1.35; letter-spacing: .015em; }
 .section-heading h2 span { color: var(--blue); }
 .section-note { padding-bottom: 5px; font-size: 12px; color: var(--muted); }
-.paper { display: grid; grid-template-columns: 310px 1fr; gap: 42px; padding: 38px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.paper { display: grid; grid-template-columns: 180px 1fr; gap: 36px; padding: 38px 0; border-bottom: 1px solid var(--line); align-items: center; }
 .paper:last-child { padding-bottom: 0; border-bottom: 0; }
 .paper-visual { border: 1px solid #e0e5ef; border-radius: 4px; overflow: hidden; background: #f0f3f8; }
-.paper-image-wrap { height: 197px; padding: 12px; display: flex; align-items: center; background: #fff; }
-.paper-image-wrap img { width: 100%; height: auto; max-height: 100%; aspect-ratio: 2.6; object-fit: contain; transition: transform .4s; }
-.paper-visual:hover img { transform: scale(1.03); }
+.paper-image-wrap { aspect-ratio: 900 / 1165; background: #fff; }
+.paper-image-wrap img { width: 100%; height: auto; object-fit: contain; }
+.paper-visual:hover { border-color: #b2c0df; }
 .image-caption { border-top: 1px solid #e0e5ef; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; font-family: monospace; font-size: 9px; letter-spacing: .12em; color: #5f7195; background: #f7f8fc; }
 .paper-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 13px; color: var(--muted); font-size: 9px; letter-spacing: .06em; margin-bottom: 11px; }
 .paper-badge { color: var(--blue); background: var(--blue-light); padding: 3px 8px; border-radius: 3px; font-size: 10px; letter-spacing: 0; }
@@ -131,8 +131,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 20px; background:
   .hero-links { gap: 20px; }
   .hero-statement { font-size: 24px; }
   .hero-description { font-size: 13px; }
-  .paper { grid-template-columns: 260px 1fr; gap: 28px; }
-  .paper-image-wrap { height: 180px; }
+  .paper { grid-template-columns: 160px 1fr; gap: 28px; }
   .paper h3 { font-size: 19px; }
   .experience-layout { gap: 35px; }
   .contact-email { font-size: 14px; gap: 16px; }
@@ -167,7 +166,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 20px; background:
   .section-heading h2 { font-size: 29px; }
   .section-note { font-size: 11px; }
   .paper { grid-template-columns: 1fr; padding-block: 30px; gap: 23px; }
-  .paper-image-wrap { height: 220px; padding: 15px; }
+  .paper-visual { width: 180px; justify-self: center; }
   .paper h3 { font-size: 22px; }
   .paper-description { font-size: 13px; }
   .authors { font-size: 11px; }
