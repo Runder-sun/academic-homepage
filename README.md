@@ -37,4 +37,4 @@ IKMo 的标题、七位作者及预览图来自本人提供的最新论文 PDF�
 - IKMo PDF：https://arxiv.org/pdf/2505.21146
 - 邮箱来自 EgoPathBench 官方项目页面。
 
-SceneReVis 与 EgoPathBench 预览图取自本人项目页面，IKMo 预览图取自本人提供的论文 PDF。首页蓝色曲面为原创数学图形，仅作装饰示意，并非实验结果。
+三篇论文的预览图统一使用方法或基准构建流程图：EgoPathBench 来自官方项目页的构建流程图，SceneReVis 与 IKMo 来自本人提供的定稿方法图。图片保留图形原始比例与完整内容，IKMo 仅去除外围空白。首页蓝色曲面为原创数学图形，仅作装饰示意，并非实验结果。
