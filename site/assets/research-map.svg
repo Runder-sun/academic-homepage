@@ -37,19 +37,19 @@
       <path d="m279 158 25-14 22 12-26 14Z" stroke="#C9BDB0" stroke-width=".65"/>
     </g>
 
-    <g stroke="#7D3945" stroke-width="1.8">
+    <g stroke="#514B45" stroke-width="1.8">
       <path d="m156 291 39-22 57 11 51-29-15-19 38-22"/>
       <circle cx="156" cy="291" r="3.5" fill="#F8F4ED"/>
-      <circle cx="195" cy="269" r="2.6" fill="#7D3945" stroke="none"/>
-      <circle cx="252" cy="280" r="2.6" fill="#7D3945" stroke="none"/>
-      <circle cx="303" cy="251" r="2.6" fill="#7D3945" stroke="none"/>
-      <circle cx="288" cy="232" r="2.6" fill="#7D3945" stroke="none"/>
+      <circle cx="195" cy="269" r="2.6" fill="#514B45" stroke="none"/>
+      <circle cx="252" cy="280" r="2.6" fill="#514B45" stroke="none"/>
+      <circle cx="303" cy="251" r="2.6" fill="#514B45" stroke="none"/>
+      <circle cx="288" cy="232" r="2.6" fill="#514B45" stroke="none"/>
       <circle cx="326" cy="210" r="3.5" fill="#F8F4ED"/>
       <circle cx="326" cy="210" r="7.5" stroke-width=".7" opacity=".45"/>
     </g>
 
     <path d="m362 288 32 18-42 23" stroke="#CABFB2" stroke-width=".8" stroke-dasharray="2 5"/>
-    <g stroke="#7D3945" stroke-width="1.55">
+    <g stroke="#514B45" stroke-width="1.55">
       <circle cx="416" cy="257" r="7" fill="#F5F0E8"/>
       <path d="m416 264-2 14-5 24m-9-29 28 12m-14-7-14-5-12 15m40-3 9 18 10 4m-38-5-9 14-7 20m16-34 15 13 3 20"/>
       <path d="m389 337 9 2m26-3 10 0" stroke-width="1.2"/>

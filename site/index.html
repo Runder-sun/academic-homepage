@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f1e9">
-  <meta name="description" content="赵阳 Yang Zhao，上海交通大学直博四年级。研究方向包括空间智能、三维场景生成、可控人体动作生成与具身导航。">
+  <meta name="description" content="赵阳 Yang Zhao，上海交通大学计算机学院直博四年级，导师杨旭波。本科毕业于北京航空航天大学沈元学院。研究方向包括空间智能、三维场景生成、可控人体动作生成与具身导航。">
   <meta property="og:title" content="赵阳 Yang Zhao · Academic Homepage">
   <meta property="og:description" content="Spatial intelligence, 3D scene generation, controllable human motion, and embodied navigation. Shanghai Jiao Tong University.">
   <meta property="og:type" content="website">
   <title>赵阳 Yang Zhao · 学术主页</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=research-journal-20261015">
+  <script src="theme.js?v=20261015"></script>
+  <link rel="stylesheet" href="styles.css?v=theme-editions-20261015">
   <script src="script.js" defer></script>
+  <script src="spatial-scene.js?v=20261015" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
@@ -33,7 +35,8 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="profile-mark" aria-hidden="true"></span> <span data-zh="空间智能 · 研究与探索" data-en="SPATIAL INTELLIGENCE · RESEARCH & EXPLORATION">空间智能 · 研究与探索</span></p>
         <h1 id="name">Yang Zhao<span class="chinese-name">赵阳</span></h1>
-        <p class="affiliation" data-zh="上海交通大学 · 直博四年级" data-en="Fourth-year Ph.D. student · Shanghai Jiao Tong University">上海交通大学 · 直博四年级</p>
+        <p class="affiliation" data-zh="上海交通大学计算机学院 · 直博四年级" data-en="Fourth-year Ph.D. student · School of Computer Science, Shanghai Jiao Tong University">上海交通大学计算机学院 · 直博四年级</p>
+        <p class="profile-detail"><span data-zh="导师：" data-en="Advisor: ">导师：</span><a href="https://www.cs.sjtu.edu.cn/en/jiaoshiml/yangxubo.html" target="_blank" rel="noopener noreferrer" data-zh="杨旭波" data-en="Xubo Yang">杨旭波</a><span class="profile-separator" aria-hidden="true">·</span><a href="http://dalab.se.sjtu.edu.cn/www/home/" target="_blank" rel="noopener noreferrer" data-zh="数字艺术实验室（DALAB）" data-en="Digital ART Laboratory (DALAB)">数字艺术实验室（DALAB）</a></p>
         <h2 class="hero-statement" data-zh="研究空间中的\n生成、理解与行动。" data-en="Generation, understanding,\nand action in 3D spaces.">研究空间中的<br>生成、理解与行动。</h2>
         <p class="hero-description" data-zh="我的研究围绕三维场景生成、可控人体动作生成与具身导航展开，探索模型如何构建三维世界、理解空间，并将感知转化为行动。" data-en="My research spans 3D scene generation, controllable human motion, and embodied navigation. I explore how models build 3D worlds, understand space, and translate perception into action.">我的研究围绕三维场景生成、可控人体动作生成与具身导航展开，探索模型如何构建三维世界、理解空间，并将感知转化为行动。</p>
         <div class="hero-links">
@@ -42,9 +45,11 @@
           <a class="text-link" href="mailto:runder1103@sjtu.edu.cn"><span data-zh="邮件联系" data-en="Email">邮件联系</span></a>
         </div>
       </div>
-      <figure class="hero-visual" aria-label="研究方向概念示意图" data-label-zh="研究方向概念示意图" data-label-en="Conceptual illustration of my research interests">
+      <figure class="hero-visual" aria-label="可交互的研究方向概念示意图" data-label-zh="可交互的研究方向概念示意图" data-label-en="Interactive conceptual illustration of my research interests">
         <div class="figure-top"><span data-zh="研究手记" data-en="RESEARCH NOTES">研究手记</span><span>FIG. 01</span></div>
-        <img src="assets/research-map.svg" alt="房间结构、人体姿态与行动路径组成的研究概念线稿" data-label-zh="房间结构、人体姿态与行动路径组成的研究概念线稿" data-label-en="A conceptual line drawing of a room, a human pose, and an action path" width="480" height="400" fetchpriority="high">
+        <canvas id="spatial-canvas" width="480" height="360" tabindex="0" aria-describedby="scene-hint" aria-label="可拖动旋转的三维房间与人体路径动画" data-label-zh="可拖动旋转的三维房间与人体路径动画" data-label-en="A draggable 3D room with an animated human following a path"><img src="assets/research-map.svg" alt="房间结构、人体姿态与行动路径组成的研究概念线稿" data-label-zh="房间结构、人体姿态与行动路径组成的研究概念线稿" data-label-en="A conceptual line drawing of a room, a human pose, and an action path" width="480" height="400"></canvas>
+        <div class="scene-controls"><button id="scene-toggle" type="button" aria-pressed="true" data-zh="暂停动画" data-en="Pause">暂停动画</button><button id="scene-reset" type="button" data-zh="重置视角" data-en="Reset view">重置视角</button></div>
+        <p id="scene-hint" data-zh="拖动旋转 · 方向键调整视角" data-en="Drag to orbit · Arrow keys to rotate">拖动旋转 · 方向键调整视角</p>
         <figcaption><span data-zh="场景 · 动作 · 导航" data-en="SCENES · MOTION · NAVIGATION">场景 · 动作 · 导航</span><span data-zh="概念示意" data-en="CONCEPT SKETCH">概念示意</span></figcaption>
       </figure>
     </section>
@@ -125,9 +130,10 @@
       <div class="content-width experience-layout">
         <div class="section-heading"><div><p class="eyebrow section-kicker">02 / BACKGROUND</p><h2 id="experience-title" data-zh="学习与经历" data-en="Background">学习与经历</h2><p class="experience-intro" data-zh="教育与实习" data-en="Education & internships">教育与实习</p></div></div>
         <div class="experience-list">
-          <article class="experience-item"><div><span class="experience-type" data-zh="教育经历" data-en="EDUCATION">教育经历</span><h3 data-zh="上海交通大学" data-en="Shanghai Jiao Tong University">上海交通大学</h3><p data-zh="直博 · 四年级" data-en="Direct-entry Ph.D. · Fourth year">直博 · 四年级</p></div><span class="experience-index" aria-hidden="true">01</span></article>
-          <article class="experience-item"><div><span class="experience-type" data-zh="实习经历" data-en="INTERNSHIP">实习经历</span><h3 data-zh="微软亚洲研究院" data-en="Microsoft Research Asia">微软亚洲研究院</h3><p>Microsoft Research Asia · MSRA</p></div><span class="experience-index" aria-hidden="true">02</span></article>
-          <article class="experience-item"><div><span class="experience-type" data-zh="实习经历" data-en="INTERNSHIP">实习经历</span><h3 data-zh="智元机器人" data-en="AGIBOT">智元机器人</h3><p>AGIBOT</p></div><span class="experience-index" aria-hidden="true">03</span></article>
+          <article class="experience-item"><div><span class="experience-type" data-zh="教育经历" data-en="EDUCATION">教育经历</span><h3 data-zh="上海交通大学" data-en="Shanghai Jiao Tong University">上海交通大学</h3><p data-zh="计算机学院 · 直博四年级" data-en="School of Computer Science · Direct-entry Ph.D., year 4">计算机学院 · 直博四年级</p></div><span class="experience-index" aria-hidden="true">01</span></article>
+          <article class="experience-item"><div><span class="experience-type" data-zh="教育经历" data-en="EDUCATION">教育经历</span><h3 data-zh="北京航空航天大学" data-en="Beihang University">北京航空航天大学</h3><p data-zh="沈元学院 · 本科" data-en="Shen Yuan Honors College · Undergraduate studies">沈元学院 · 本科</p></div><span class="experience-index" aria-hidden="true">02</span></article>
+          <article class="experience-item"><div><span class="experience-type" data-zh="实习经历" data-en="INTERNSHIP">实习经历</span><h3 data-zh="微软亚洲研究院" data-en="Microsoft Research Asia">微软亚洲研究院</h3><p>Microsoft Research Asia · MSRA</p><p class="experience-dates" data-zh="2025.08 — 2026.02" data-en="Aug 2025 — Feb 2026">2025.08 — 2026.02</p></div><span class="experience-index" aria-hidden="true">03</span></article>
+          <article class="experience-item"><div><span class="experience-type" data-zh="实习经历" data-en="INTERNSHIP">实习经历</span><h3 data-zh="智元机器人" data-en="AGIBOT">智元机器人</h3><p>AGIBOT</p><p class="experience-dates" data-zh="2026.08 — 至今" data-en="Aug 2026 — Present">2026.08 — 至今</p></div><span class="experience-index" aria-hidden="true">04</span></article>
         </div>
       </div>
     </section>
