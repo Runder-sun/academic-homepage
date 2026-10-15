@@ -21,6 +21,8 @@
 
 姓名、博士年级、学校及实习机构由本人提供。研究简介根据两篇论文概括；不补充未经确认的导师、实习日期、录用会议或奖项。
 
+SceneReVis 的 ACM MM 2026 Oral 录用信息由本人确认。
+
 - SceneReVis 项目：https://scenerevis.github.io/
 - SceneReVis 论文：https://arxiv.org/abs/2602.09432
 - SceneReVis 代码：https://github.com/Runder-sun/SceneReVis
