@@ -23,12 +23,18 @@
 
 SceneReVis 的 ACM MM 2026 Oral 录用信息由本人确认。
 
+IKMo 的标题、七位作者及预览图来自本人提供的最新论文 PDF。ICME 2026 Spotlight 录用信息由本人确认；引用使用 2026 年会议条目，未补充未经确认的 DOI 或页码。
+
+两篇会议定稿 PDF 保存于 `site/papers/`，均为本人提供的原始文件。SceneReVis 的 DOI `10.1145/3767308.3835940` 及会议引用信息来自其定稿首页。
+
 - SceneReVis 项目：https://scenerevis.github.io/
 - SceneReVis 论文：https://arxiv.org/abs/2602.09432
 - SceneReVis 代码：https://github.com/Runder-sun/SceneReVis
 - EgoPathBench 项目：https://egopathbench.github.io/EgoPathBench/
 - EgoPathBench 论文：https://arxiv.org/abs/2609.16610
 - EgoPathBench 代码：https://github.com/EgoPathBench/EgoPathBench
+- IKMo 论文：https://arxiv.org/abs/2505.21146
+- IKMo PDF：https://arxiv.org/pdf/2505.21146
 - 邮箱来自 EgoPathBench 官方项目页面。
 
-论文预览图取自本人项目页面。首页蓝色曲面为原创数学图形，仅作装饰示意，并非实验结果。
+SceneReVis 与 EgoPathBench 预览图取自本人项目页面，IKMo 预览图取自本人提供的论文 PDF。首页蓝色曲面为原创数学图形，仅作装饰示意，并非实验结果。

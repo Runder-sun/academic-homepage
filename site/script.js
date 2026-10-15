@@ -8,16 +8,24 @@ const citations = {
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2609.16610}
 }`,
-  scene: `@misc{zhao2026scenerevis,
-  title={SceneReVis: A Self-Reflective Vision-Grounded Framework for 3D Indoor Scene Synthesis via Multi-turn RL},
+  scene: `@inproceedings{zhao2026scenerevis,
+  title={SceneReVis: A Self-Reflective Vision-Grounded Framework for 3D Indoor Scene Synthesis via Multi-Turn RL},
   author={Yang Zhao and Shizhao Sun and Meisheng Zhang and Yingdong Shi and Xubo Yang and Jiang Bian},
+  booktitle={Proceedings of the 34th ACM International Conference on Multimedia},
   year={2026},
-  eprint={2602.09432},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
+  doi={10.1145/3767308.3835940},
   url={https://arxiv.org/abs/2602.09432}
+}`,
+  ikmo: `@inproceedings{zhao2026ikmo,
+  title={{IKMo}: Image-Keyframed Motion Generation with Trajectory-Pose Conditioned Motion Diffusion Model},
+  author={Yang Zhao and Yan Zhang and Zixuan Guo and Hangyu Zhou and Haotian Mao and Hui Wang and Xubo Yang},
+  booktitle={2026 IEEE International Conference on Multimedia and Expo (ICME)},
+  year={2026},
+  url={https://arxiv.org/abs/2505.21146}
 }`
 };
+
+const paperTitles = { ego: 'EgoPathBench', scene: 'SceneReVis', ikmo: 'IKMo' };
 
 let language = 'zh';
 const languageButton = document.querySelector('.language-toggle');
@@ -44,7 +52,7 @@ languageButton.addEventListener('click', () => {
 document.querySelectorAll('.citation-button').forEach(button => {
   button.addEventListener('click', () => {
     citationText.textContent = citations[button.dataset.paper];
-    document.querySelector('#citation-title').textContent = button.dataset.paper === 'ego' ? 'EgoPathBench' : 'SceneReVis';
+    document.querySelector('#citation-title').textContent = paperTitles[button.dataset.paper];
     copyStatus.textContent = '';
     dialog.showModal();
   });
